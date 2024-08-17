@@ -42,7 +42,8 @@ We call the system that keeps our board's health in check the _**Heartbeat Monit
 
 Today we will write a _**Heartbeat Monitor**_ for the next generation UBC Formula E Racecar.
 
-> Note: *We're interested in seeing how you think about software*, so write down everything, show your thinking, take your time, and don't stress too much!
+> [!NOTE]  
+> *We're interested in seeing how you think about software*, so write down everything, show your thinking, take your time, and don't stress too much!
 
 ## Technical Description
 You will be implementing the hearbeat monitor for the _**Vehicle Controller**_ described above. We expect your solution to be located at [`problem/solution.c`](./problem/solution.c), where it says `YOUR SOLUTION HERE`.
