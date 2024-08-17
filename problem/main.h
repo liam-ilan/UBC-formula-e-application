@@ -2,7 +2,6 @@
 #define MAIN_H
 #include "api.h"
 
-#define CLOCKS_PER_MS (CLOCKS_PER_SEC / 1000)
 #define TASK_MS (1000)
 #define HB_MS (500)
 #define RENDER_MS (100)
