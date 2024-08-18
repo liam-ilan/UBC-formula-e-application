@@ -1,9 +1,9 @@
 #include <stdbool.h>
 #include "api.h"
 
-bool reporting[BOARD_COUNT] = {true, true};
-bool heartbeats[BOARD_COUNT] = {true, true};  
-int alerts[BOARD_COUNT] = {0, 0}; 
+bool reporting[BOARD_COUNT] = {true, true, true};
+bool heartbeats[BOARD_COUNT] = {true, true, true}; 
+int alerts[BOARD_COUNT] = {0, 0, 0}; 
 bool alive = true;
 
 void alert_missing_heartbeat(Board board) {

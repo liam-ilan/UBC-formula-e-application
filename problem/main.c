@@ -94,13 +94,25 @@ void render(int car_x) {
         printf("\n");
     }
 
+    if (reporting[BATTERY]) {
+        printf("Battery Management System Heartbeat:");
+        print_check();
+        printf("\n");
+    } else {
+        printf("Battery Management System Heartbeat:");
+        print_x();
+        printf("\n");
+    }
+
     for (int i = 0; i < WIDTH - car_x; i += 1) printf(" ");
     printf("🏎️\n");
 
     printf("Missing Front Sensor Heartbeat Monitor Alerts: %d\n", alerts[FRONT]);
-    printf("Missing Front Sensor Heartbeat Monitor Alerts: %d\n", alerts[REAR]);
+    printf("Missing Rear Sensor Heartbeat Monitor Alerts: %d\n", alerts[REAR]);
+    printf("Missing Battery Management System Heartbeat Monitor Alerts: %d\n", alerts[BATTERY]);
     printf("\e[1mPress f to toggle the Front Sensor Module heartbeat.\e[0m\n");
     printf("\e[1mPress r to toggle the Rear Sensor Module Heartbeat.\e[0m\n");
+    printf("\e[1mPress b to toggle the Battery Management System heartbeat.\e[0m\n");
 }
 
 int main() {
@@ -122,6 +134,8 @@ int main() {
             reporting[FRONT] = !reporting[FRONT];
         } else if (c == 'r') {
             reporting[REAR] = !reporting[REAR];
+        } else if (c == 'b') {
+            reporting[BATTERY] = !reporting[BATTERY];
         }
 
         // Keep track of time.
@@ -134,6 +148,7 @@ int main() {
             // Heartbeats get updated every HB_MS.
             heartbeats[FRONT] = reporting[FRONT];
             heartbeats[REAR] = reporting[REAR];
+            heartbeats[BATTERY] = reporting[BATTERY];
             
             time_ms_since_last_hb = 0;
         }

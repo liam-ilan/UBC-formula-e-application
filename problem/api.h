@@ -6,6 +6,7 @@
 // an enum to define common indicies to the front and rear sensor modules
 typedef enum {
     FRONT,
+    BATTERY,
     REAR,
     BOARD_COUNT
 } Board;
