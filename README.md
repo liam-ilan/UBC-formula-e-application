@@ -1,15 +1,15 @@
-# UBC FE Challenge - Cardiovehicular Surgery ❤️⚡
+# UBC Formula E Heartbeat Monitor Challenge ❤️⚡
 
 > [!IMPORTANT]  
 > Your first step should be to create a repo using this template repo. Do this by clicking "use this template" on the top right of the page. Please create a **PRIVATE** repo to not leak your submission.
 
 Hey 👋! This repo contains a task given to one of our newcomer software engineers last year
 
-At Formula E, we work with five programmable boards. These boards make up a network along which information from sensors, controls, and telemetry is broadcast.
+At Formula E, we work with five programmable boards. These boards make up a network along which information from sensors, controls, and telemetry is broadcasted.
 
 Some boards rely on other boards to operate properly.
 
-For example, our _**Vehicle Controller**_ takes in temprature information from the _**Rear Sensor Module**_ and accelerator pedal information from the  _**Front Sensor Module**_ to drive decisions.
+For example, our _**Vehicle Controller**_ takes in temprature information from the _**Rear Sensor Module**_ and accelerator pedal information from the  _**Front Sensor Module**_ to make decisions.
 
 ```
 +------------+                       +--------------+
