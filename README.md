@@ -82,8 +82,7 @@ Can be found at [`problem/api.h`](./problem/api.h).
 
 - `void heartbeats_set(Board board, bool status)`
     - Writes a status to the local _**heartbeat table**_.
-    > [!NOTE]  
-    > Calling `heartbeats_set` updates the _**Vehicle Controller's heartbeat table**_. Note that the Front Sensor Module, Rear Sensor Module, and Battery Management System may write to that table at any time.
+    - Calling `heartbeats_set` updates the _**Vehicle Controller's heartbeat table**_. Note that the Front Sensor Module, Rear Sensor Module, and Battery Management System may write to that table at any time.
 
 - `void alert_missing_heartbeat(Board board)`
     - Alerts that a heartbeat from a given board is missing.
