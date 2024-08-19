@@ -71,6 +71,9 @@ To build and run this challenge, just run
 gcc problem/*.c -o main && ./main
 ```
 
+> [!WARNING]  
+> This will only compile with Posix compliant systems (Unix/MacOS/Linux should be fine). For those compiling on windows, you will need to use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+
 ### API Reference
 Can be found at [`problem/api.h`](./problem/api.h).
 
