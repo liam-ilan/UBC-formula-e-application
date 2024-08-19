@@ -4,6 +4,8 @@
 #include <termios.h>
 #include <ctype.h>
 #include <unistd.h>
+#include <stdint.h>
+
 #include "main.h"
 #include "api.h"
 #include "solution.h"
@@ -119,10 +121,10 @@ int main() {
     initEvents();
 
     int car_x = 0;
-    __uint64_t time_ms = 0;
-    __uint64_t time_ms_since_last_hb = 0;
-    __uint64_t time_ms_since_last_task = 0;
-    __uint64_t time_ms_since_last_render = 0;
+    uint64_t time_ms = 0;
+    uint64_t time_ms_since_last_hb = 0;
+    uint64_t time_ms_since_last_task = 0;
+    uint64_t time_ms_since_last_render = 0;
 
     for (;;) {
         // ReadChar blocks for a maximum of 100ms.
