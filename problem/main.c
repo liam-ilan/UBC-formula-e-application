@@ -148,10 +148,18 @@ int main() {
         
         if (time_ms_since_last_hb > HB_MS) {
             // Heartbeats get updated every HB_MS.
-            heartbeats[FRONT] = reporting[FRONT];
-            heartbeats[REAR] = reporting[REAR];
-            heartbeats[BATTERY] = reporting[BATTERY];
-            
+            if (reporting[FRONT] == true) {
+                heartbeats[FRONT] = true;
+            }
+           
+            if (reporting[REAR] == true) {
+                heartbeats[REAR] = true;
+            }
+
+            if (reporting[BATTERY] == true) {
+                heartbeats[BATTERY] = true;
+            }
+
             time_ms_since_last_hb = 0;
         }
 
